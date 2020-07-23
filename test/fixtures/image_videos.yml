@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  title: MyString
+  image: MyString
+  video: MyString
+  impression_student: MyString
+  impression_owner: MyString
+  day: 2020-07-23
+
+two:
+  name: MyString
+  title: MyString
+  image: MyString
+  video: MyString
+  impression_student: MyString
+  impression_owner: MyString
+  day: 2020-07-23
