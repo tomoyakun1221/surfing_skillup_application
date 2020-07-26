@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_24_140006) do
+ActiveRecord::Schema.define(version: 2020_07_26_161007) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -62,8 +62,7 @@ ActiveRecord::Schema.define(version: 2020_07_24_140006) do
     t.string "name_call"
     t.string "tel"
     t.string "email"
-    t.integer "age"
-    t.string "birthday"
+    t.date "birthday"
     t.string "using_surfboard"
     t.string "password_digest"
     t.boolean "admin"

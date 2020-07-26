@@ -1,29 +1,61 @@
-<h2>Sign up</h2>
+<div class="main-container-signup">
+  <div class="row">
+    <div class="col-md-5 col-md-offset-5">
+      <h2 class="label-signup">新規登録</h2>
+      <br>
+      <br>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+        <div class="name-space">
+          <%= f.label :name %><br />
+          <%= f.text_field :name, autofocus: true, autocomplete: "name", size: "40" %>
+        </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <div class="namecall-space">
+          <%= f.label :name_call %><br />
+          <%= f.text_field :name_call, autofocus: true, autocomplete: "name", size: "40" %>
+        </div>
+
+        <div class="tel-space">
+          <%= f.label :tel %><br />
+          <%= f.text_field :tel, placeholder: "半角数字、ハイフンなし", autofocus: true, autocomplete: "tel", size: "40" %>
+        </div>
+
+        <div class="email-space">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, placeholder: "xxxx@gmail.com", autofocus: true, autocomplete: "email", size: "40" %>
+        </div>
+
+        <div class="birthday-space">
+          <%= f.label :birthday %><br />
+          <%= f.date_select :birthday, use_month_numbers: true, start_year: 1930, end_year: (Time.zone.now.year), default: Date.new(1989, 1, 1) %>
+        </div>
+
+        <div class="using_surfboard-space">
+          <%= f.label :using_surfboard %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "using_surfboard", size: "40" %>
+        </div>
+
+
+        <div class="password-space">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> 文字以上のパスワードを設定してください)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "new-password", size: "40" %>
+        </div>
+
+        <div class="password-space">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", size: "40" %>
+        </div>
+
+        <div class="signup-space">
+          <%= f.submit "登録", class: "btn btn-primary btn-sign-up" %>
+        </div>
+      <% end %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
+    

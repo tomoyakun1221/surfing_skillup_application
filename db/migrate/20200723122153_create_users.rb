@@ -5,8 +5,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :name_call
       t.string :tel
       t.string :email
-      t.integer :age
-      t.string :birthday
+      t.date :birthday   null: false
       t.string :using_surfboard
       t.string :password_digest
       t.boolean :admin

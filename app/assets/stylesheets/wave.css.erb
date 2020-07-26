@@ -1,0 +1,43 @@
+.main-container-login {
+  background-image: url("<%= asset_path('波.jpg') %>");
+  height: 705px;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-container-login:before,
+.main-container-login:after {
+  animation: 2s cubic-bezier(.4, 0, .2, 1) forwards;
+  background: #fff;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.main-container-login:before {
+  animation-name: main-container-login-before;
+  top: 0;
+  bottom: 50%;
+}
+
+.main-container-login:after {
+  animation-name: main-container-login-after;
+  top: 50%;
+  bottom: 0;
+}
+
+@keyframes main-container-login-before {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes main-container-login-after {
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -35,8 +35,11 @@ gem 'bigdecimal'
 gem 'roo'
 gem 'will_paginate'
 gem 'faker'
-
 gem 'devise'
+gem 'bootstrap-sass'
+gem "jquery-rails"
+gem "jquery-ui-rails"
+gem 'haml-rails'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'

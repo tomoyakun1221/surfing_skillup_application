@@ -1,0 +1,98 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* ヘッダー */
+header {
+  margin-top: 5px;
+  background-color: aquamarine;
+}
+
+#logo {
+  float: left;
+  margin-top: -5px;
+  font-size: 1.8em;
+  color: blue;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  }
+
+#logo:hover {
+  color: blue;
+  text-decoration: underline black;
+}
+
+/* ログイン画面 */
+.label-login {
+  margin-left: 80px;
+}
+
+.remember-me-space {
+  margin-top: 10px;
+}
+
+.login-space {
+  margin-top: 10px;
+}
+
+.sign_up-space {
+  margin-top: 10px;
+}
+
+.password-space {
+  margin-top: 10px;
+}
+
+.forget-password-space {
+  margin-top: 10px;
+}
+
+.btn-login {
+  width: 40%;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+.btn-sign-up {
+  width: 40%;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+.btn-forget-password {
+  margin-left: 40px;
+}
+
+/* 新規登録画面 */
+.label-signup {
+  margin-left: 90px;
+}
+
+.name-space {
+  margin-top: 10px;
+}
+
+.namecall-space {
+  margin-top: 10px;
+}
+
+.tel-space {
+  margin-top: 10px;
+}
+
+.email-space {
+  margin-top: 10px;
+}
+
+.birthday-space {
+  margin-top: 10px;
+}
+
+.using_surfboard-space {
+  margin-top: 10px;
+}
+
+.signup-space {
+  margin-top: 10px;
+}
