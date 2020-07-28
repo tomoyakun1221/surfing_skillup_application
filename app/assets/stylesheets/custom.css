@@ -87,7 +87,6 @@ header {
 
 /* 新規登録画面 */
 .label-signup {
-  color: blue;
   margin-top: 100px;
   margin-left: 90px;
 }
@@ -125,6 +124,19 @@ header {
 .signup-space {
   color: blue;
   margin-top: 10px;
+}
+
+/* 管理者チェック項目レイアウト */
+
+.admin-check-message {
+  color: blue;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.admin-check {
+  color: blue;
+  margin-left: 130px;
 }
 
 /* パスワード再発行画面 */

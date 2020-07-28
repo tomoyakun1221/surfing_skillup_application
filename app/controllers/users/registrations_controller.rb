@@ -6,12 +6,18 @@ class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    @user = User.new(user_params)
+  end
 
   # POST /resource
   def create
+    @user = User.new(user_params)
+    if @user.save
+      flash[:success] = "登録しました！"
+    else
+      render 'new'
+    end
   end
 
   # GET /resource/edit
@@ -38,6 +44,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     super
   end
 
+  private
+
+  def user_params
+    params.require(:user).permit(:name, :name_call, :tel, :email, :birthday, :using_surfboard, :admin, :password, :password_confirmation)
+  end
   # protected
 
   # If you have extra params to permit, append them to the sanitizer.

@@ -7,8 +7,16 @@
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
 
+        <div class="row">
+          <h5 class="admin-check-message">※管理者の場合はチェックを入れてください</h5>
+          <div class="admin-check">
+            <%= f.label :admin %>
+            <%= f.check_box :admin %>
+          </div>
+        </div>
+
         <div class="name-space">
-          <%= f.label :name %><br />
+          <%= f.label :name %>※<br />
           <%= f.text_field :name, autofocus: true, autocomplete: "name", size: "40" %>
         </div>
 
@@ -18,28 +26,28 @@
         </div>
 
         <div class="tel-space">
-          <%= f.label :tel %><br />
+          <%= f.label :tel %>※<br />
           <%= f.text_field :tel, placeholder: "半角数字、ハイフンなし", autofocus: true, autocomplete: "tel", size: "40" %>
         </div>
 
         <div class="email-space">
-          <%= f.label :email %><br />
+          <%= f.label :email %>※<br />
           <%= f.email_field :email, placeholder: "xxxx@gmail.com", autofocus: true, autocomplete: "email", size: "40" %>
         </div>
 
         <div class="birthday-space">
-          <%= f.label :birthday %><br />
+          <%= f.label :birthday %>※<br />
           <%= f.date_select :birthday, use_month_numbers: true, start_year: 1930, end_year: (Time.zone.now.year), default: Date.new(1989, 1, 1) %>
         </div>
 
         <div class="using_surfboard-space">
           <%= f.label :using_surfboard %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "using_surfboard", size: "40" %>
+          <%= f.text_field :using_surfboard, autofocus: true, autocomplete: "using_surfboard", size: "40" %>
         </div>
 
 
         <div class="password-space">
-          <%= f.label :password %>
+          <%= f.label :password %>※
           <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> 文字以上のパスワードを設定してください)</em>
           <% end %><br />
@@ -47,7 +55,7 @@
         </div>
 
         <div class="password-space">
-          <%= f.label :password_confirmation %><br />
+          <%= f.label :password_confirmation %>※<br />
           <%= f.password_field :password_confirmation, autocomplete: "new-password", size: "40" %>
         </div>
 
