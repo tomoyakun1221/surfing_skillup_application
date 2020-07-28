@@ -5,8 +5,7 @@ one:
   name_call: MyString
   tel: MyString
   email: MyString
-  age: 1
-  birthday: MyString
+  birthday: 2020-07-28
   using_surfboard: MyString
   password_digest: MyString
   admin: false
@@ -17,8 +16,7 @@ two:
   name_call: MyString
   tel: MyString
   email: MyString
-  age: 1
-  birthday: MyString
+  birthday: 2020-07-28
   using_surfboard: MyString
   password_digest: MyString
   admin: false

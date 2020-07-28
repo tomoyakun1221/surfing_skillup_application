@@ -9,7 +9,8 @@
       <br>
       <br>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div>
+        <%= render 'layouts/notifications' %>
+        <div class="email_space">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email", size: "40" %>
         </div>

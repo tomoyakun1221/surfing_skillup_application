@@ -1,17 +1,23 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* エラーメッセージ */
+.notification-alart {
+  color: red;
+  margin-left: -25px;
+  font-weight: bold;
+}
+
 /* ヘッダー */
 header {
-  margin-top: 5px;
-  background-color: aquamarine;
+  margin-right: 200px;
 }
 
 #logo {
   float: left;
   margin-top: -5px;
   font-size: 1.8em;
-  color: blue;
+  color: aquamarine;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -19,32 +25,43 @@ header {
   }
 
 #logo:hover {
-  color: blue;
+  color: aquamarine;
   text-decoration: underline black;
+}
+
+#error_explanation {
+  color: red;
+  font-weight: bold;
 }
 
 /* ログイン画面 */
 .label-login {
+  margin-top: 100px;
   margin-left: 80px;
 }
 
 .remember-me-space {
+  color: blue;
   margin-top: 10px;
 }
 
 .login-space {
+  color: blue;
   margin-top: 10px;
 }
 
 .sign_up-space {
+  color: blue;
   margin-top: 10px;
 }
 
 .password-space {
+  color: blue;
   margin-top: 10px;
 }
 
 .forget-password-space {
+  color: blue;
   margin-top: 10px;
 }
 
@@ -64,35 +81,71 @@ header {
   margin-left: 40px;
 }
 
+.email_space {
+  color: blue;
+}
+
 /* 新規登録画面 */
 .label-signup {
+  color: blue;
+  margin-top: 100px;
   margin-left: 90px;
 }
 
 .name-space {
+  color: blue;
   margin-top: 10px;
 }
 
 .namecall-space {
+  color: blue;
   margin-top: 10px;
 }
 
 .tel-space {
+  color: blue;
   margin-top: 10px;
 }
 
 .email-space {
+  color: blue;
   margin-top: 10px;
 }
 
 .birthday-space {
+  color: blue;
   margin-top: 10px;
 }
 
 .using_surfboard-space {
+  color: blue;
   margin-top: 10px;
 }
 
 .signup-space {
+  color: blue;
   margin-top: 10px;
+}
+
+/* パスワード再発行画面 */
+.password-republish-space {
+  margin-top: 150px;
+  margin-left: 5px;
+}
+
+.password-republish-message {
+  color: red;
+  margin-top: 60px;
+  margin-left: -180px;
+  font-weight: bold;
+}
+
+.email-send-space {
+  color: blue;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.email-submit-space {
+  margin-top: 80px;
 }
