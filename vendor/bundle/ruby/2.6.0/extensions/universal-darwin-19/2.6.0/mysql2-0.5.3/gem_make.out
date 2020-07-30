@@ -1,48 +1,49 @@
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.6.0/gems/mysql2-0.5.3/ext/mysql2
-/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20200724-2309-1azni5o.rb extconf.rb
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20200730-7272-1k6tep4.rb extconf.rb
 checking for rb_absint_size()... yes
 checking for rb_absint_singlebit_p()... yes
 checking for rb_wait_for_single_fd()... yes
-checking for -lmysqlclient... no
 -----
-mysql client is missing. You may need to 'brew install mysql' or 'port install mysql', and try again.
+Using mysql_config at /usr/local/opt/mysql@5.7/bin/mysql_config
 -----
-*** extconf.rb failed ***
-Could not create Makefile due to some reason, probably lack of necessary
-libraries and/or headers.  Check the mkmf.log file for more details.  You may
-need configuration options.
+checking for mysql.h... yes
+checking for errmsg.h... yes
+checking for SSL_MODE_DISABLED in mysql.h... yes
+checking for SSL_MODE_PREFERRED in mysql.h... yes
+checking for SSL_MODE_REQUIRED in mysql.h... yes
+checking for SSL_MODE_VERIFY_CA in mysql.h... yes
+checking for SSL_MODE_VERIFY_IDENTITY in mysql.h... yes
+checking for MYSQL.net.vio in mysql.h... yes
+checking for MYSQL.net.pvio in mysql.h... no
+checking for MYSQL_ENABLE_CLEARTEXT_PLUGIN in mysql.h... yes
+checking for SERVER_QUERY_NO_GOOD_INDEX_USED in mysql.h... yes
+checking for SERVER_QUERY_NO_INDEX_USED in mysql.h... yes
+checking for SERVER_QUERY_WAS_SLOW in mysql.h... yes
+checking for MYSQL_OPTION_MULTI_STATEMENTS_ON in mysql.h... yes
+checking for MYSQL_OPTION_MULTI_STATEMENTS_OFF in mysql.h... yes
+checking for my_bool in mysql.h... yes
+-----
+Don't know how to set rpath on your system, if MySQL libraries are not in path mysql2 may not load
+-----
+-----
+Setting libpath to /usr/local/opt/mysql@5.7/lib
+-----
+creating Makefile
 
-Provided configuration options:
-	--with-opt-dir
-	--without-opt-dir
-	--with-opt-include
-	--without-opt-include=${opt-dir}/include
-	--with-opt-lib
-	--without-opt-lib=${opt-dir}/lib
-	--with-make-prog
-	--without-make-prog
-	--srcdir=.
-	--curdir
-	--ruby=/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/$(RUBY_BASE_NAME)
-	--with-mysql-dir
-	--without-mysql-dir
-	--with-mysql-include
-	--without-mysql-include=${mysql-dir}/include
-	--with-mysql-lib
-	--without-mysql-lib=${mysql-dir}/lib
-	--with-mysql-config
-	--without-mysql-config
-	--with-mysql-dir
-	--without-mysql-dir
-	--with-mysql-include
-	--without-mysql-include=${mysql-dir}/include
-	--with-mysql-lib
-	--without-mysql-lib=${mysql-dir}/lib
-	--with-mysqlclientlib
-	--without-mysqlclientlib
+current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.6.0/gems/mysql2-0.5.3/ext/mysql2
+make "DESTDIR=" clean
 
-To see why this extension failed to compile, please check the mkmf.log which can be found here:
+current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.6.0/gems/mysql2-0.5.3/ext/mysql2
+make "DESTDIR="
+compiling client.c
+compiling infile.c
+compiling mysql2_ext.c
+compiling result.c
+compiling statement.c
+linking shared-object mysql2/mysql2.bundle
+ld: warning: directory not found for option '-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.Internal.sdk/usr/local/lib'
+ld: library not found for -lssl
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [mysql2.bundle] Error 1
 
-  /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.6.0/extensions/universal-darwin-19/2.6.0/mysql2-0.5.3/mkmf.log
-
-extconf failed, exit code 1
+make failed, exit code 2

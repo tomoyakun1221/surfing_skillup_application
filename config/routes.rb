@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: "home#index"
+  # devise_for :users
+  # resources :users
 
-  get '/users' => redirect("users/sign_in")
+  # root 'users#show'
 
-  get '/users/password' => redirect("users/password/new")
+  # get 'user/show'
+  # get '/users' => redirect("users/sign_in")
+  # get '/users/password' => redirect("users/password/new")
 
-  # get '/users/sign_in', to: 'users#sigh_in'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

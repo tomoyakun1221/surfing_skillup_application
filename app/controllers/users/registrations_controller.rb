@@ -15,6 +15,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "登録しました！"
+      if current_user.admin
+        redirect_to user_url
+      else
+        redirect_to new_user_session_url
+      end
     else
       render 'new'
     end
