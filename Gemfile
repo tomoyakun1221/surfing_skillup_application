@@ -40,6 +40,7 @@ gem 'bootstrap-sass'
 gem "jquery-rails"
 gem "jquery-ui-rails"
 gem 'haml-rails'
+gem 'rspec-rails'
 
 group :development, :test do
   # gem 'sqlite3', '~> 1.4'

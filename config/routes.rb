@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  root 'users#top_page'
+
   resources :users
 
-  root 'users#show'
-
-  get 'user/show'
   get '/users' => redirect("users/sign_in")
   get '/users/password' => redirect("users/password/new")
 

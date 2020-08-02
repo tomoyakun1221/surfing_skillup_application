@@ -2,6 +2,7 @@
 96af013eed295576ac246f46dee1d01d67888801		branch '4-x-stable' of https://github.com/rails/webpacker
 117bd42dd25b1a66ce2a2340054a65a0ac583d55		branch '5.0-fixes' of https://github.com/rails/webpacker
 0903bd38bd2686e31bffc0792d06548e9b4f8367		branch 'cache-control' of https://github.com/rails/webpacker
+46fffce386dd972410f898e7f5f844995e6fad64		branch 'dependabot/npm_and_yarn/elliptic-6.5.3' of https://github.com/rails/webpacker
 73bcfe8c0e2de8b5fdd53c8f51695e384cd5f242		branch 'dependabot/npm_and_yarn/lodash-4.17.19' of https://github.com/rails/webpacker
 0464a54b1657600c90bd444545a72cee7561e698		branch 'fix-erb-loader' of https://github.com/rails/webpacker
 bf278f9787704ed0f78038ad7d36c008abc2edfd		branch 'master' of https://github.com/rails/webpacker
