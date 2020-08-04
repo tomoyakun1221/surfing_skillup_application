@@ -3,14 +3,19 @@
     <nav>
       <div class="row">
         <div class="col-xs-6 col-md-6">
-          <%= link_to "surfing_skillup_app", user_session_path, id: "logo" %>
+          <div style="margin-left: -160px; margin-top: 10px;">
+            <%= link_to "surfing_skillup_app", user_session_path, id: "logo" %>
+          </div>
         </div>
         <div class="col-xs-6 col-md-6">
           <% if user_signed_in? %>
-            <%= link_to "会員情報一覧", edit_user_path(current_user) %>
-            <%= link_to "設定", edit_user_path(current_user) %>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            <span style="font-size: small;">ID:<%= current_user.id %>&nbsp;<%= current_user.name %>
+            <div style="margin-top: 10px;">
+              <%= link_to "お気に入り一覧", edit_user_path(current_user), class: "btn btn-primary" %>
+              <%= link_to "会員情報一覧", edit_user_path(current_user), class: "btn btn-primary" %>
+              <%= link_to "設定", edit_user_path(current_user), class: "btn btn-primary" %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+              <span style="font-size: small;">ID:<%= current_user.id %>&nbsp;<%= current_user.name %>
+            </div>
           <% end %>
         </div>
       </div>

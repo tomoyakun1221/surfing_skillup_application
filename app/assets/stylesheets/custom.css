@@ -170,6 +170,17 @@ header {
 /* 管理者専用ページ */
 
 .label-manager {
+  margin-top: 150px;
+}
+
+.shop-space {
   margin-top: 100px;
-  margin-left: 25px;
+}
+
+.reservation-space {
+  margin-top: 50px;
+}
+
+.student-impression-space {
+  margin-top: 50px;
 }

@@ -1,68 +1,28 @@
 <div class="main-container-manager">
   <div class="row">
     <div class="col-md-5 col-md-offset-5">
-      <h2 class="label-manager">管理者専用ページ</h2>
+      <h1 class="label-manager"><b>管理者専用ページ</b></h1>
       <br>
       <br>
       <%= form_with(model: @user, method: :get, local: true) do |f| %>
 
-        <div class="row">
-          <h5 class="admin-check-message">※管理者の場合はチェックを入れてください</h5>
-          <div class="admin-check">
-            <%= f.label :admin %>
-            <%= f.check_box :admin %>
-          </div>
+        <div class="admin-check-space">
+          <h3>スクール生からの通知:なし</h3>
         </div>
 
-        <div class="name-space">
-          <%= f.label :name %>※<br />
-          <%= f.text_field :name, autofocus: true, autocomplete: "name", size: "40" %>
+        <div class="shop-space">
+          <%= link_to "ショップ情報", '＃', class: "btn btn-primary btn-lg" %>
         </div>
 
-        <div class="namecall-space">
-          <%= f.label :name_call %><br />
-          <%= f.text_field :name_call, placeholder: "全角カタカナ", autofocus: true, autocomplete: "name", size: "40" %>
+        <div class="reservation-space">
+          <%= link_to "スクール予約状況一覧", '＃', class: "btn btn-primary btn-lg" %>
         </div>
 
-        <div class="tel-space">
-          <%= f.label :tel %>※<br />
-          <%= f.text_field :tel, placeholder: "半角数字、ハイフンなし", autofocus: true, autocomplete: "tel", size: "40" %>
+        <div class="student-impression-space">
+          <%= link_to "スクール生動画・感想内容閲覧", '＃', class: "btn btn-primary btn-lg" %>
         </div>
 
-        <div class="email-space">
-          <%= f.label :email %>※<br />
-          <%= f.email_field :email, placeholder: "xxxx@gmail.com", autofocus: true, autocomplete: "email", size: "40" %>
-        </div>
-
-        <div class="birthday-space">
-          <%= f.label :birthday %>※<br />
-          <%= f.date_select :birthday, use_month_numbers: true, start_year: 1930, end_year: (Time.zone.now.year), default: Date.new(1989, 1, 1) %>
-        </div>
-
-        <div class="using_surfboard-space">
-          <%= f.label :using_surfboard %><br />
-          <%= f.text_field :using_surfboard, autofocus: true, autocomplete: "using_surfboard", size: "40" %>
-        </div>
-
-
-        <div class="password-space">
-          <%= f.label :password %>※
-          <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> 文字以上のパスワードを設定してください)</em>
-          <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password", size: "40" %>
-        </div>
-
-        <div class="password-space">
-          <%= f.label :password_confirmation %>※<br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", size: "40" %>
-        </div>
-
-        <div class="signup-space">
-          <%= f.submit "登録", class: "btn btn-primary btn-sign-up" %>
-        </div>
       <% end %>
     </div>
   </div>
 </div>
-    
