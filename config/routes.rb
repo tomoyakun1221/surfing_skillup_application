@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get '/users' => redirect("users/sign_in")
   get '/users/password' => redirect("users/password/new")
+  get '/image_videos/index'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

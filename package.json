@@ -7,11 +7,12 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.1.1",
     "axios": "^0.19.2",
+    "bootstrap-vue": "^2.16.0",
     "turbolinks": "^5.2.0",
     "vue": "^2.6.11",
     "vue-eslint-parser": "^7.1.0",
     "vue-loader": "^15.9.3",
-    "vue-router": "^3.3.4",
+    "vue-router": "^3.4.1",
     "vue-template-compiler": "^2.6.11",
     "vuex": "^3.5.1"
   },

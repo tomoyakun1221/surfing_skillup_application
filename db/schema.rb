@@ -15,14 +15,18 @@ ActiveRecord::Schema.define(version: 2020_07_30_172547) do
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "event"
     t.string "event_deadline"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "favorite"
+    t.boolean "favorite"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "image_videos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -33,14 +37,18 @@ ActiveRecord::Schema.define(version: 2020_07_30_172547) do
     t.string "impression_student"
     t.string "impression_owner"
     t.date "day"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_image_videos_on_user_id"
   end
 
   create_table "surf_spots", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "surf_spot"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_surf_spots_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -72,4 +80,8 @@ ActiveRecord::Schema.define(version: 2020_07_30_172547) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "events", "users"
+  add_foreign_key "favorites", "users"
+  add_foreign_key "image_videos", "users"
+  add_foreign_key "surf_spots", "users"
 end
