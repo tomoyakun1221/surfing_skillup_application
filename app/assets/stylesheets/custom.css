@@ -184,3 +184,10 @@ header {
 .student-impression-space {
   margin-top: 50px;
 }
+
+/* 管理者専用ページ */
+
+.label-index {
+  margin-top: 150px;
+  margin-left: 560px;
+}

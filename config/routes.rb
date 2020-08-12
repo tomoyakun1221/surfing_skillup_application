@@ -3,7 +3,12 @@ Rails.application.routes.draw do
 
   root 'users#top_page'
 
-  resources :users
+  resources :users do
+    member do
+      get 'edit_user_info'
+      patch 'update_user_info'
+    end
+  end
 
   get '/users' => redirect("users/sign_in")
   get '/users/password' => redirect("users/password/new")

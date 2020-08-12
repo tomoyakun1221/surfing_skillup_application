@@ -1,0 +1,43 @@
+.main-container-student-index {
+  background-image: url("<%= asset_path('200607_sunscreen.jpg') %>");
+  height: 700px;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-container-student-index:before,
+.main-container-student-index:after {
+  animation: 2s cubic-bezier(.4,   0, .2, 1) forwards;
+  background: #fff;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.main-container-student-index:before {
+  animation-name: main-container-student-index-before;
+  top: 0;
+  bottom: 50%;
+}
+
+.main-container-student-index:after {
+  animation-name: main-container-student-index-after;
+  top: 50%;
+  bottom: 0;
+}
+
+@keyframes main-container-student-index-before {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes main-container-student-index-after {
+  100% {
+    transform: translateX(-100%);
+  }
+}

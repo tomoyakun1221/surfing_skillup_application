@@ -11,10 +11,14 @@
           <% if user_signed_in? %>
             <div style="margin-top: 10px;">
               <%= link_to "お気に入り一覧", edit_user_path(current_user), class: "btn btn-primary" %>
-              <%= link_to "会員情報一覧", edit_user_path(current_user), class: "btn btn-primary" %>
+              <%= link_to "会員情報一覧", users_path, class: "btn btn-primary" %>
               <%= link_to "設定", edit_user_path(current_user), class: "btn btn-primary" %>
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
-              <span style="font-size: small;">ID:<%= current_user.id %>&nbsp;<%= current_user.name %>
+              <div style="margin-left: 300px; margin-top: -35px;"> 
+                <%= button_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+              </div>
+              <div style="margin-left: 400px; margin-top: -27px;">
+                <span style="font-size: small;">ID:<%= current_user.id %>&nbsp;<%= current_user.name %>
+              </div>
             </div>
           <% end %>
         </div>

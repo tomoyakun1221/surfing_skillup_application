@@ -19,4 +19,9 @@ class User < ApplicationRecord
   validates :birthday, presence: true
   validates :email, presence: true, length: { maximum: 100 }, format: { with: VALID_EMAIL_REGEX }, uniqueness: true
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+
+  # ユーザー名による絞り込み
+  scope :get_by_name, ->(name) {
+    where("name like ?", "%#{name}%")
+  }
 end

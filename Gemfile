@@ -41,6 +41,8 @@ gem "jquery-rails"
 gem "jquery-ui-rails"
 gem 'haml-rails'
 gem 'rspec-rails'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development, :test do
   # gem 'sqlite3', '~> 1.4'
