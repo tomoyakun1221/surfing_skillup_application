@@ -12,7 +12,7 @@
             <div style="margin-top: 10px;">
               <%= link_to "お気に入り一覧", edit_user_path(current_user), class: "btn btn-primary" %>
               <%= link_to "会員情報一覧", users_path, class: "btn btn-primary" %>
-              <%= link_to "設定", edit_user_path(current_user), class: "btn btn-primary" %>
+              <%= link_to "設定", edit_user_registration_path(current_user), class: "btn btn-primary" %>
               <div style="margin-left: 300px; margin-top: -35px;"> 
                 <%= button_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
               </div>

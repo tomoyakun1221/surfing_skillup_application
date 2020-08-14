@@ -191,3 +191,30 @@ header {
   margin-top: 150px;
   margin-left: 560px;
 }
+
+/* 管理者専用ページ */
+
+.label-edit-title {
+  margin-bottom: 50px;
+  margin-top: 150px;
+  margin-left: 560px;
+}
+
+.label-user-info {
+  color: blue;
+  margin-top: 10px;
+}
+
+.btn-user-info {
+  margin-top: 10px;
+  margin-left: 250px;
+}
+
+.btn-cancell {
+  margin-top: 10px;
+}
+
+/* ユーザー設定 */
+.label-user-edit {
+  margin-top: 150px
+}

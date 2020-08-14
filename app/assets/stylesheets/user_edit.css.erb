@@ -1,0 +1,43 @@
+.main-container-user-edit {
+  background-image: url("<%= asset_path('surfin.jpg') %>");
+  height: 900px;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-container-user-edit:before,
+.main-container-user-edit:after {
+  animation: 2s cubic-bezier(.4,   0, .2, 1) forwards;
+  background: #fff;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.main-container-user-edit:before {
+  animation-name: main-container-user-edit-before;
+  top: 0;
+  bottom: 50%;
+}
+
+.main-container-user-edit:after {
+  animation-name: main-container-user-edit-after;
+  top: 50%;
+  bottom: 0;
+}
+
+@keyframes main-container-user-edit-before {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes main-container-user-edit-after {
+  100% {
+    transform: translateX(-100%);
+  }
+}

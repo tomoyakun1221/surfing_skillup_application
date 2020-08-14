@@ -20,9 +20,21 @@ class UsersController < ApplicationController
   def edit_user_info
   end
 
+  def update_user_info
+    @user.update_attributes(user_params)
+    flash[:success] = "#{@user.name}の基本情報を更新しました。"
+    redirect_to users_url
+  end
+
   def destroy
     @user.destroy
     flash[:success] = "#{@user.name}のデータを削除しました。"
     redirect_to users_url
   end
 end
+
+private
+
+  def user_params
+    params.require(:user).permit(:tel, :email)
+  end
