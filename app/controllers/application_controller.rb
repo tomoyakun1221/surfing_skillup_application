@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
   def set_user
     @user = User.find(params[:id])
   end
+
+  def set_one_month
+    @first_day = params[:date].nil? ? Date.current.beginning_of_month : params[:date].to_date
+  end
 end

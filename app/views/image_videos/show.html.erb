@@ -1,0 +1,54 @@
+<div class="main-container-student-impression_contents">
+<h1 class="label-student-impression"><b>スクール生感想内容一覧</b></h1>
+  <div class="row">
+    <div class="col-md-11 col-md-offset-0">
+      <br>
+      <%= form_with method: :get, local: true do |f| %>
+        <div class="year-month-day-label">
+          <%= f.label :day, "年月検索" %>
+        </div>
+        <br>
+        <div class="day-label">
+          <%= f.date_select :day, {:discard_day => true, :include_blank => true, :start_year => Time.now.year, :end_year => Time.now.year-15}, class: "form-control" %>
+          <%= f.submit "表示する", class: "btn btn-md btn-primary" %>
+        </div>
+      <% end %>
+      <div class="student-search-label">
+        <%= form_with(model: @user, method: :get, local: true) do |f| %>
+          <%= f.label :search, "タイトル検索" %>
+          <br>
+          <div style="display: inline-flex">
+            <%= f.text_field :name, class: "form-control", placeholder: "キーワードを入力" %>
+            <%= f.submit "検索", class: "btn btn-md btn-primary btn-name-search" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="month-switching">
+    <%= link_to "←", image_video_path(date: @first_day.prev_month), class: "btn btn-sm btn-primary" %>
+    <span class="align-middle">&nbsp;&nbsp;&nbsp;<b><%= l(@first_day, format: :middle) %>&nbsp;&nbsp</b>
+    <span class="align-top"><%= link_to "→", image_video_path(date: @first_day.next_month), class: "btn btn-sm btn-primary" %></span>
+  </div>
+  <div class="col-xs-6 col-md-6" style="margin-left: 380px; margin-top: 10px;">
+    <% @image_videos.each do |image_video| %>
+      <%= will_paginate %>
+        <table class="table table-bordered table-condensed table-hover">
+          <thead style="color: blue;">
+            <tr>
+              <th>撮影日</th>
+              <th>タイトル</th>
+              <th>お気に入り</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= image_video.photograph_day_on %></td>
+              <td><%= link_to image_video.title, '#' %></td>
+              <td><%= link_to "追加", '#', method: :post, class: "btn btn-primary" %></td>
+            </tr>
+          </tbody>
+      <%= will_paginate %>
+    <% end %>
+  </div>
+</div>

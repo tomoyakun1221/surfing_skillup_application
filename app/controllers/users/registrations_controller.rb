@@ -26,14 +26,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   # GET /resource/edit
-  # def edit
-  #   super
-  # end
+  def edit
+  end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
+  def update
+    @user.update_attributes(user_account_params)
+    flash[:success] = "アカウント情報を更新しました"
+    redirect_to root_url
+  end
 
   # DELETE /resource
   # def destroy
@@ -53,6 +54,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def user_params
     params.require(:user).permit(:name, :name_call, :tel, :email, :birthday, :using_surfboard, :admin, :password, :password_confirmation)
+  end
+
+  def user_account_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
   # protected
 

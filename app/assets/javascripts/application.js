@@ -18,3 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     render: (h) => h(App),
   });
 });
+
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets

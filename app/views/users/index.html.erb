@@ -1,62 +1,59 @@
-  <div class="main-container-student-index">
+<div class="main-container-student-index">
   <div style="margin-top: 50px;">
     <% flash.each do |message_type, msg| %>
       <div class="alert alert-<%= message_type %>"><%= msg %></div>
     <% end %>
   </div>
-    <div style="margin-top: 100px;">
-      <h1 class="label-index"><b>スクール生一覧</b></h1>
+  <div style="margin-top: 100px;">
+    <h1 class="label-index"><b>スクール生一覧</b></h1>
 
-      <div class="row">
-        <div class="col-md-3 col-md-offset-8">
-            <%= form_with(model: @user, method: :get, local: true) do |f| %>
-            <%= f.label :search, "スクール生検索" %>
-            <div style="display: inline-flex">
-                <%= f.text_field :name, class: "form-control", placeholder: "キーワードを入力" %>
-                <%= f.submit "検索", class: "btn btn-md btn-primary btn-name-search" %>
-            </div>
+    <div class="row">
+      <div class="col-md-3 col-md-offset-8">
+        <%= form_with(model: @user, method: :get, local: true) do |f| %>
+          <%= f.label :search, "スクール生検索" %>
+          <div style="display: inline-flex">
+              <%= f.text_field :name, class: "form-control", placeholder: "キーワードを入力" %>
+              <%= f.submit "検索", class: "btn btn-md btn-primary btn-name-search" %>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-md-10 col-md-offset-1">
+        <%= will_paginate %>
+        <% if @users.count > 0 %>
+          <table class="table table-bordered table-condensed table-hover" id="table-users">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>名前</th>
+                <th>電話番号</th>
+                <th>メールアドレス</th>
+                <th>スクール生情報操作</th>
+              </tr>
+            </thead>
+            <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= user.id %></td>
+                <td><%= link_to user.name, user %></td>
+                <td><%= user.tel %></td>
+                <td><%= user.email %></td>
+                <td>
+                  <%= link_to "編集", edit_user_info_user_path(user), class: "btn btn-primary" %>
+                  <div style="margin-top: -34px; margin-left: 60px;">
+                  <%= button_to "削除", user, method: :delete,
+                      data: { confirm: "削除してよろしいですか？" },
+                      class: "btn btn-danger" %>
+                  </div>
+                </td>
+              </tr>
             <% end %>
-        </div>
-        <div class="col-md-10 col-md-offset-1">
-          <%= will_paginate %>
-          <% if @users.count > 0 %>
-            <table class="table table-bordered table-condensed table-hover" id="table-users">
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>名前</th>
-                    <th>電話番号</th>
-                    <th>メールアドレス</th>
-                    <th>スクール生情報操作</th>
-                </tr>
-                </thead>
-                <tbody>
-                <% @users.each do |user| %>
-                  <tr>
-                    <td><%= user.id %></td>
-                    <td><%= link_to user.name, user %></td>
-                    <td><%= user.tel %></td>
-                    <td><%= user.email %></td>
-                    <td>
-                      <%= link_to "編集", edit_user_info_user_path(user), class: "btn btn-primary" %>
-                      <div style="margin-top: -34px; margin-left: 60px;">
-                      <%= button_to "削除", user, method: :delete,
-                          data: { confirm: "削除してよろしいですか？" },
-                          class: "btn btn-danger" %>
-                      </div>
-                    </td>
-                  </tr>
-                <% end %>
-                </tbody>
-            </table>
-          <% else %>
-            <h3 class="center">スタッフが存在しません</h3>
-          <% end %>
-          <%= will_paginate %>
-        </div>
+            </tbody>
+          </table>
+        <% else %>
+          <h3 class="center">スクール生が存在しません</h3>
+        <% end %>
+        <%= will_paginate %>
       </div>
     </div>
-  <div>
-
-
-<div id="edit_user_info" class="modal fade" tabindex="-1" rule="dialog" area-hidden="true"></div>
+  </div>
+<div>

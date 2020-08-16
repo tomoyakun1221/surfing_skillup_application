@@ -216,5 +216,77 @@ header {
 
 /* ユーザー設定 */
 .label-user-edit {
-  margin-top: 150px
+  margin-top: 150px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+}
+
+.email-field {
+  color: blue;
+}
+
+.password-field {
+  color: blue;
+  margin-top: 10px;
+}
+
+.password_confirmation-field {
+  color: blue;
+  margin-top: 10px;
+}
+
+.current_password-field {
+  color: blue;
+  margin-top: 10px;
+}
+
+/* スクール生感想内容一覧 */
+.month-switching {
+  color: blue;
+  margin-top: 30px;
+  margin-left: 625px;
+}
+
+.label-student-impression {
+  margin-top: 100px;
+  margin-left: 520px;
+}
+
+$ng_alert_bg_color: #f2dede;
+$ng_alert_border_color: #eed3d7;
+$ng_alert_color: #b94a48;
+$ok_alert_bg_color: #dff0d8;
+$ok_alert_border_color: #d6e9c6;
+$ok_alert_color: #468847;
+/* flash */
+.alert-alert {
+  background-color: $ng_alert_bg_color;
+  border-color: $ng_alert_border_color;
+  color: $ng_alert_color;
+  margin-left: -530px;
+}
+.alert-notice {
+  background-color: $ok_alert_bg_color;
+  border-color: $ok_alert_border_color;
+  color: $ok_alert_color;
+  margin-left: -530px;
+}
+
+.year-month-day-label {
+  color: blue;
+  margin-top: 60px;
+  margin-left: 385px;
+  display: inline-flex;
+  transform:translateX(120%);
+}
+
+.day-label {
+  display: inline-flex;
+  padding-left: 450px;
+}
+
+.student-search-label {
+  color: blue;
+  padding-left: 750px;
+  margin-top: -60px;
 }

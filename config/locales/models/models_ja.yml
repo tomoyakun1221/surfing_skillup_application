@@ -15,5 +15,6 @@ ja:
           remember_me: ログインを保持する
           password: パスワード
           password_confirmation: パスワード再入力
+          current_password: 現在のパスワード
           created_at: 登録日
           updated_at: 更新日

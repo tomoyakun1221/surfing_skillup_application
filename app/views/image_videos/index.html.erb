@@ -1,2 +1,40 @@
-<h1>ImageVideosindex</h1>
-<p>Find me in app/views/image_videos/index.html.haml</p>
+<div class="main-container-student-impression">
+  <h1 class="label-student-impression"><b>スクール生感想内容検索</b></h1>
+    <div class="col-md-3 col-md-offset-8">
+      <%= form_with(model: @user, method: :get, local: true) do |f| %>
+        <%= f.label :search, "スクール生検索" %>
+        <div style="display: inline-flex">
+          <%= f.text_field :name, class: "form-control", placeholder: "キーワードを入力" %>
+          <%= f.submit "検索", class: "btn btn-md btn-primary btn-name-search" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 col-md-6" style="margin-left: 380px; margin-top: 10px;">
+        <% @users.each do |user| %>
+        <%= will_paginate %>
+          <% if @users.count > 0 %>
+            <table class="table table-bordered table-condensed table-hover">
+              <thead style="color: blue;">
+                <tr>
+                  <th>ID</th>
+                  <th>名前</th>
+                  <th>使用サーフボード</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><%= user.id %></td>
+                  <td><%= link_to user.name, image_video_path(user.id) %></td>
+                  <td><%= user.using_surfboard %></td>
+                </tr>
+              </tbody>
+            </table>
+          <% else %>
+            <h3 class="center">スクール生が存在しません。</h3>
+          <% end %>
+          <%= will_paginate %>
+        <% end %>
+      </div>
+    </div>
+</div>

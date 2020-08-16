@@ -1,0 +1,44 @@
+.main-container-student-impression_contents {
+  background-image: url("<%= asset_path('ms_surfing-3.jpg') %>");
+  height: 900px;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-container-student-impression_contents:before,
+.main-container-student-impression_contents:after {
+  animation: 2s cubic-bezier(.4,   0, .2, 1) forwards;
+  background: #fff;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  z-impression: 1;
+}
+
+.main-container-student-impression_contents:before {
+  animation-name: main-container-student-impression_contents-before;
+  top: 0;
+  bottom: 50%;
+}
+
+.main-container-student-impression_contents:after {
+  animation-name: main-container-student-impression_contents-after;
+  top: 50%;
+  bottom: 0;
+}
+
+@keyframes main-container-student-impression_contents-before {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes main-container-student-impression_contents-after {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+

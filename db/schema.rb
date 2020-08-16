@@ -22,21 +22,22 @@ ActiveRecord::Schema.define(version: 2020_07_30_172547) do
   end
 
   create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.boolean "favorite"
+    t.bigint "image_video_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["image_video_id"], name: "index_favorites_on_image_video_id"
+    t.index ["user_id", "image_video_id"], name: "index_favorites_on_user_id_and_image_video_id", unique: true
     t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "image_videos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
     t.string "title"
     t.string "image"
     t.string "video"
     t.string "impression_student"
     t.string "impression_owner"
-    t.date "day"
+    t.date "photograph_day_on"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -81,6 +82,7 @@ ActiveRecord::Schema.define(version: 2020_07_30_172547) do
   end
 
   add_foreign_key "events", "users"
+  add_foreign_key "favorites", "image_videos"
   add_foreign_key "favorites", "users"
   add_foreign_key "image_videos", "users"
   add_foreign_key "surf_spots", "users"
