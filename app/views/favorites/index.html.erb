@@ -1,0 +1,36 @@
+<div class="main-container-student-impression_contents">
+<h1 class="label-student-impression"><b>お気に入り一覧</b></h1>
+  <div class="row">
+    <div class="col-md-11 col-md-offset-0">
+      <div style="margin-top: 50px;">
+        <% flash.each do |message_type, msg| %>
+          <div class="alert alert-<%= message_type %>"><%= msg %></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-6 col-md-6" style="margin-left: 380px; margin-top: 10px;">
+    <% @image_videos.each do |image_video| %>
+      <% if Favorite.exists?(user_id: current_user.id, image_video_id: image_video.id) %>
+        <%= will_paginate %>
+        <table class="table table-bordered table-condensed table-hover">
+          <thead style="color: blue;">
+            <tr>
+              <th>撮影日</th>
+              <th>タイトル</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= image_video.photograph_day_on %></td>
+              <td><%= link_to image_video.title, '#' %></td>
+            </tr>
+          </tbody>
+        </table>
+        <%= will_paginate %>
+      <% else %>
+        <h3 class="center">お気に入りはありません。</h3>
+      <% end %>
+    <% end %>
+  </div>
+</div>

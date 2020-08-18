@@ -1,4 +1,4 @@
 class ImageVideo < ApplicationRecord
-  belongs_to :user
-  has_many :image_videos, dependent: :destroy
+  has_many :users, through: :favorites
+  has_many :favorites
 end

@@ -2,6 +2,11 @@
 <h1 class="label-student-impression"><b>スクール生感想内容一覧</b></h1>
   <div class="row">
     <div class="col-md-11 col-md-offset-0">
+      <div style="margin-top: 50px;">
+        <% flash.each do |message_type, msg| %>
+          <div class="alert alert-<%= message_type %>"><%= msg %></div>
+        <% end %>
+      </div>
       <br>
       <%= form_with method: :get, local: true do |f| %>
         <div class="year-month-day-label">
@@ -45,7 +50,11 @@
             <tr>
               <td><%= image_video.photograph_day_on %></td>
               <td><%= link_to image_video.title, '#' %></td>
-              <td><%= link_to "追加", '#', method: :post, class: "btn btn-primary" %></td>
+              <% if !Favorite.exists?(user_id: current_user.id, image_video_id: image_video.id) %>
+                <td><%= button_to "追加", favorites_path(image_video), method: :post, class: "btn btn-primary" %></td>
+              <% else %>
+                <td><%= button_to "解除", favorite_path(image_video), method: :delete, class: "btn btn-primary" %></td>
+              <% end %>
             </tr>
           </tbody>
       <%= will_paginate %>

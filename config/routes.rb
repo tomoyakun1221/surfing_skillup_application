@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   resources :image_videos
 
+  resources :favorites
+
   get '/users' => redirect("users/sign_in")
   get '/users/password' => redirect("users/password/new")
 
