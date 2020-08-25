@@ -1,5 +1,5 @@
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
-/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200730-67903-5d9s74.rb extconf.rb
+/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200825-4352-16gyj7c.rb extconf.rb
 creating Makefile
 
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
@@ -12,4 +12,4 @@ linking shared-object skiptrace/internal/cruby.bundle
 
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20200730-67903-1m3c7a2/skiptrace/internal
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20200825-4352-ywzf0f/skiptrace/internal

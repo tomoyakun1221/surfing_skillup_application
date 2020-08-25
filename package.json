@@ -1,5 +1,6 @@
 {
   "name": "myapp",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
@@ -8,6 +9,8 @@
     "@rails/webpacker": "5.1.1",
     "axios": "^0.19.2",
     "bootstrap-vue": "^2.16.0",
+    "element-ui": "^2.13.2",
+    "qs": "^6.9.4",
     "turbolinks": "^5.2.0",
     "vue": "^2.6.11",
     "vue-eslint-parser": "^7.1.0",
@@ -16,8 +19,10 @@
     "vue-template-compiler": "^2.6.11",
     "vuex": "^3.5.1"
   },
-  "version": "0.1.0",
   "devDependencies": {
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "vue-cli-plugin-element": "~1.0.1",
     "webpack-dev-server": "^3.11.0"
   }
 }

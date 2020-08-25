@@ -1,5 +1,5 @@
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/mysql2-0.5.3/ext/mysql2
-/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200730-87138-5xk3jg.rb extconf.rb --with-opt-lib=/usr/local/opt/openssl/lib --with-opt-include=-I/usr/local/opt/openssl/include
+/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200825-4352-1hvu7sc.rb extconf.rb --with-opt-lib=/usr/local/opt/openssl/lib --with-opt-include=-I/usr/local/opt/openssl/include
 checking for rb_absint_size()... yes
 checking for rb_absint_singlebit_p()... yes
 checking for rb_wait_for_single_fd()... yes
@@ -41,4 +41,4 @@ linking shared-object mysql2/mysql2.bundle
 
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/mysql2-0.5.3/ext/mysql2
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20200730-87138-wtroc3/mysql2
+/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20200825-4352-rtylad/mysql2

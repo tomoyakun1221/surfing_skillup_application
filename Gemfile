@@ -43,6 +43,8 @@ gem 'haml-rails'
 gem 'rspec-rails'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'ransack'
+gem 'faker'
 
 group :development, :test do
   # gem 'sqlite3', '~> 1.4'

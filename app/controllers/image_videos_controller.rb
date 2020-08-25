@@ -12,4 +12,15 @@ class ImageVideosController < ApplicationController
   def show
     @image_videos = ImageVideo.paginate(page: params[:page]).order(:id)
   end
+
+  def search
+    @q = ImageVideo.ransack(search_params)
+    @staffs = @q.result(distinct: true)
+  end
+
+  private
+
+  def search_params
+    params.require(:q).permit(:photograph_day_on, :title)
+  end
 end

@@ -1,5 +1,5 @@
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/pg-1.2.3/ext
-/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200730-87138-7hka5v.rb extconf.rb
+/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200825-4352-17c8hpk.rb extconf.rb
 checking for pg_config... yes
 Using config values from /usr/local/bin/pg_config
 checking for libpq-fe.h... yes
@@ -150,4 +150,4 @@ linking shared-object pg_ext.bundle
 
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/pg-1.2.3/ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 pg_ext.bundle ./.gem.20200730-87138-18r4t2k
+/usr/bin/install -c -m 0755 pg_ext.bundle ./.gem.20200825-4352-b766mk

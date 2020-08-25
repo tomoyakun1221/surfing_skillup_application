@@ -16,8 +16,8 @@
         <table class="table table-bordered table-condensed table-hover">
           <thead style="color: blue;">
             <tr>
-              <th>撮影日</th>
-              <th>タイトル</th>
+              <th style="text-align: center;">撮影日</th>
+              <th style="text-align: center;">タイトル</th>
             </tr>
           </thead>
           <tbody>
@@ -31,6 +31,7 @@
       <% else %>
         <h3 class="center">お気に入りはありません。</h3>
       <% end %>
+      <%= link_to "スクール生感想内容一覧へ", image_video_path(image_video), class: "btn btn-primary btn-block" %>
     <% end %>
   </div>
 </div>

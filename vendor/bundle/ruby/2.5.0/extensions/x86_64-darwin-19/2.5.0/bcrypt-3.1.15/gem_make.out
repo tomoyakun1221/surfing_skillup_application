@@ -1,5 +1,5 @@
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/bcrypt-3.1.15/ext/mri
-/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200730-67903-1fy6y72.rb extconf.rb
+/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200825-4352-12wth7u.rb extconf.rb
 creating Makefile
 
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/bcrypt-3.1.15/ext/mri
@@ -32,4 +32,4 @@ linking shared-object bcrypt_ext.bundle
 
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/bcrypt-3.1.15/ext/mri
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bcrypt_ext.bundle ./.gem.20200730-67903-oto8y9
+/usr/bin/install -c -m 0755 bcrypt_ext.bundle ./.gem.20200825-4352-uutydl

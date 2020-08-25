@@ -1,5 +1,5 @@
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/bigdecimal-2.0.0/ext/bigdecimal
-/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200730-67903-1g7mohj.rb extconf.rb
+/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200825-4352-1828i5z.rb extconf.rb
 checking RUBY_BIGDECIMAL_VERSION... 2.0.0
 checking for labs() in stdlib.h... yes
 checking for llabs() in stdlib.h... yes
@@ -26,4 +26,4 @@ linking shared-object bigdecimal.bundle
 
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/bigdecimal-2.0.0/ext/bigdecimal
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bigdecimal.bundle ./.gem.20200730-67903-1d4o8i0
+/usr/bin/install -c -m 0755 bigdecimal.bundle ./.gem.20200825-4352-odogw0

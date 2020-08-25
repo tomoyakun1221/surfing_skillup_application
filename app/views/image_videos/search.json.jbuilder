@@ -1,0 +1,1 @@
+json.image_videos @image_videos, partial: 'image_videos/image_video', as: :image_video

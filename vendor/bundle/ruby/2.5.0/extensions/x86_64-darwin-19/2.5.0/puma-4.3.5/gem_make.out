@@ -1,5 +1,5 @@
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/puma-4.3.5/ext/puma_http11
-/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200730-87138-hv60hs.rb extconf.rb
+/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200825-4352-zg3bsx.rb extconf.rb
 checking for BIO_read() in -lcrypto... yes
 checking for SSL_CTX_new() in -lssl... yes
 checking for openssl/bio.h... yes
@@ -34,4 +34,4 @@ linking shared-object puma/puma_http11.bundle
 
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/puma-4.3.5/ext/puma_http11
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20200730-87138-jv8b03/puma
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20200825-4352-1pxmve9/puma

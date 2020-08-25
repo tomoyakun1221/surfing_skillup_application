@@ -1,5 +1,5 @@
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/debug_inspector-0.0.3/ext/debug_inspector
-/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200730-67903-1uis1ha.rb extconf.rb
+/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200825-4352-19hnrq2.rb extconf.rb
 creating Makefile
 
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/debug_inspector-0.0.3/ext/debug_inspector
@@ -12,4 +12,4 @@ linking shared-object debug_inspector.bundle
 
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/debug_inspector-0.0.3/ext/debug_inspector
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20200730-67903-1j82v2l
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20200825-4352-1bfeihr

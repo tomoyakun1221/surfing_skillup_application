@@ -1,5 +1,5 @@
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.4.7/ext/bootsnap
-/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200730-67903-1j2kp9q.rb extconf.rb
+/Users/Owner/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200825-4352-ma0ygc.rb extconf.rb
 creating Makefile
 
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.4.7/ext/bootsnap
@@ -12,4 +12,4 @@ linking shared-object bootsnap/bootsnap.bundle
 
 current directory: /Users/Owner/Documents/docker-rails51/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.4.7/ext/bootsnap
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20200730-67903-1rgl6yt/bootsnap
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20200825-4352-4b4to5/bootsnap

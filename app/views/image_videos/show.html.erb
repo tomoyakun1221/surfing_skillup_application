@@ -1,3 +1,66 @@
+<div id="el-index">
+  <h1>staffs</h1>
+  <div class="search-form-static">
+  <div class="el-form" ref="form" :model="query" label-width="120px">
+    <el-form-item label="名前">
+      <el-input v-model="query.name_cont" placeholder="input name"></el-input>
+    </el-form-item>
+    <el-form-item label="年齢">
+      <el-col :span="11">
+        <el-input-number v-model="query.age_gteq" :min="0" :max="150"></el-input-number>
+      </el-col>
+      <el-col class="line" :span="2">-</el-col>
+      <el-col :span="11">
+        <el-input-number v-model="query.age_lteq" :min="0" :max="150"></el-input-number>
+      </el-col>
+    </el-form-item>
+    <el-form-item label="入社日">
+      <el-col :span="11">
+        <el-date-picker
+          v-model="query.joined_on_gteq"
+          type="date"
+          placeholder="日時を選択してください">
+        </el-date-picker>
+      </el-col>
+      <el-col class="line" :span="2">-</el-col>
+      <el-col :span="11">
+        <el-date-picker
+          v-model="query.joined_on_lteq"
+          type="date"
+          placeholder="日時を選択してください">
+        </el-date-picker>
+      </el-col>
+    </el-form-item>
+    <el-form-item>
+      <el-button type="primary" @click="search">search</el-button>
+    </el-form-item>
+  </div>
+  </div>
+  <el-table
+    :data="staffs"
+    height="400"
+    stripe
+    style="width: 100%">
+    <el-table-column
+      prop="name"
+      sortable
+      label="名前"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="age"
+      sortable
+      label="年齢"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="joined_on"
+      sortable
+      label="入社日">
+    </el-table-column>
+  </el-table>
+</div>
+
 <div class="main-container-student-impression_contents">
 <h1 class="label-student-impression"><b>スクール生感想内容一覧</b></h1>
   <div class="row">
@@ -41,9 +104,9 @@
         <table class="table table-bordered table-condensed table-hover">
           <thead style="color: blue;">
             <tr>
-              <th>撮影日</th>
-              <th>タイトル</th>
-              <th>お気に入り</th>
+              <th style="text-align: center;">撮影日</th>
+              <th style="text-align: center;">タイトル</th>
+              <th style="text-align: center;">お気に入り</th>
             </tr>
           </thead>
           <tbody>
@@ -51,9 +114,9 @@
               <td><%= image_video.photograph_day_on %></td>
               <td><%= link_to image_video.title, '#' %></td>
               <% if !Favorite.exists?(user_id: current_user.id, image_video_id: image_video.id) %>
-                <td><%= button_to "追加", favorites_path(image_video), method: :post, class: "btn btn-primary" %></td>
+                <td><%= button_to "追加", favorites_path(image_video), method: :post, class: "btn btn-primary btn-block" %></td>
               <% else %>
-                <td><%= button_to "解除", favorite_path(image_video), method: :delete, class: "btn btn-primary" %></td>
+                <td><%= button_to "解除", favorite_path(image_video), method: :delete, class: "btn btn-primary btn-block" %></td>
               <% end %>
             </tr>
           </tbody>
